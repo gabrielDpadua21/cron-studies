@@ -1,6 +1,7 @@
 import React from 'react';
-import Forms from './components/Forms';
-import List from './components/List';
+import Forms from '../components/Forms';
+import List from '../components/List';
+import style from './style.module.scss';
 
 const MockList = [
   {
@@ -15,7 +16,7 @@ const MockList = [
 
 function App() {
   return (
-    <div className='app'>
+    <div className={style.App}>
       <h1>Cron Studies</h1>
       <Forms />
       <List list={MockList} />
