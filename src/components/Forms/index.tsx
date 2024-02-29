@@ -2,7 +2,16 @@ import React from "react";
 import Buttom from "../Buttom";
 import style from './style.module.scss';
 
-class Forms extends React.Component {
+interface FormsProps {
+  addItem: (task: string, time: string) => void;
+}
+
+class Forms extends React.Component<FormsProps> {
+
+  constructor(props: FormsProps) {
+    super(props);
+  }
+
   render() {
     return (
         <form action="" className={style.newTask}>
@@ -14,7 +23,7 @@ class Forms extends React.Component {
                 <label htmlFor="timer">Time</label>
                 <input type="time" step="1" name="timer" id="timer" min="00:00:00" max="02:00:00" required />
             </div>
-            <Buttom />
+            <Buttom text="Add Task"/>
         </form>
     );
   }

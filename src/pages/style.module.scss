@@ -13,8 +13,10 @@
     padding: 32px;
     box-sizing: border-box;
     border-radius: 10px;
-    background-color: #171717;
-    box-shadow: 0 4px 4px rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.809);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
   
     @media screen and (min-width:1280px)  {
       grid-template-areas: 

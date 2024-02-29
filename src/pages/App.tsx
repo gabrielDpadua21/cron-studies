@@ -2,6 +2,7 @@ import React from 'react';
 import Forms from '../components/Forms';
 import List from '../components/List';
 import style from './style.module.scss';
+import Cron from '../components/Cron';
 
 const MockList = [
   {
@@ -15,11 +16,19 @@ const MockList = [
 ]
 
 function App() {
+
+  const [list, setList] = React.useState(MockList);
+
+  const addItem = (task: string, time: string) => {
+    setList([...list, { taskName: task, time: time }]);
+  }
+
+
   return (
     <div className={style.App}>
-      <h1>Cron Studies</h1>
-      <Forms />
-      <List list={MockList} />
+      <Forms addItem={addItem} />
+      <List list={list} />
+      <Cron />
     </div>
   );
 }

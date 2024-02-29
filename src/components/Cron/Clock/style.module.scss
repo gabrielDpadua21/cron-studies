@@ -1,0 +1,23 @@
+.clockNumber {
+    background: rgba(2, 8, 52, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(32, 37, 111, 0.37);
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    height: 3.6rem;
+    width: 3rem;
+    padding: 8px 4px;
+    border-radius: 10px;
+  
+    @media screen and (min-width:1280px) {
+      height: 10.8rem;
+      width: 9rem;
+    }
+  }
+  
+  .clockDiv {
+    height: 4.2rem;
+  
+    @media screen and (min-width:1280px) {
+      height: 12.6rem;
+    }
+  }
